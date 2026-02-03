@@ -6,7 +6,7 @@
 /*   By: macoulib <macoulib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 23:06:40 by macoulib          #+#    #+#             */
-/*   Updated: 2026/01/14 18:35:44 by macoulib         ###   ########.fr       */
+/*   Updated: 2026/02/03 22:41:22 by macoulib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class MutantStack : public std::stack<T>
     public :
             MutantStack() {};
             ~MutantStack(){ };
-            //crée un nouveau nom de type appelé const_iterator qui représente le type d’itérateur constant du conteneur interne utilisé par std::stack<T>
+            /* vas chercher le type de l'itérateur du conteneur qui est caché à l'intérieur de la pile.*/
             typedef typename std::stack<T>::container_type::iterator iterator;
             typedef typename std::stack<T>::container_type::const_iterator const_iterator;
             iterator begin() { return this->c.begin(); }
